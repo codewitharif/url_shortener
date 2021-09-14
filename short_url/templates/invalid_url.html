@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>Url Shortener</title>
+
+    <style>
+
+    .body{
+      padding:0;
+      margin:0;
+    }
+    
+    .content{
+        padding:10px;
+        background:white;
+
+    }
+    
+    </style>
+  </head>
+  <body>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <div class="content mt-2">
+  <div class="card">
+  <div class="card-body">
+    <form action="" method="post">
+    {% csrf_token %}
+    <div class="mb-3">
+       <input type="text" class="form-control" name="urls" id="urls" placeholder="Please enter your URL">
+       <div class="form-text">{{invalid_url_msg}}</div>
+   </div>
+
+   <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  </div>
+  </div>
+  </div>
+</body>
+</html>
