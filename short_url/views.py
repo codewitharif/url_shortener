@@ -16,4 +16,4 @@ def short_url(request):
       else:
         return render(request, 'index.html',{})
     except Exception:
-        return render(request, 'no_connection.html',{'no_connection':'Please connect to internet!'})
+        return render(request, 'index.html',{})
